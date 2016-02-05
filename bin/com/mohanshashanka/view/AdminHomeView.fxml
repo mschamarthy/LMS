@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mohanshashanka.controller.AdminHomeController">
+	<children>
+		<Text boundsType="VISUAL" layoutX="214.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Operations" textAlignment="CENTER">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Text>
+		<Button layoutX="521.0" layoutY="261.0" mnemonicParsing="false" onAction="#logout" text="Log Out" />
+		<Button layoutX="463.0" layoutY="261.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <RadioButton fx:id="userRadio" layoutX="144.0" layoutY="55.0" mnemonicParsing="false" onAction="#userSelect" text="User" />
+      <RadioButton fx:id="bookRadio" layoutX="211.0" layoutY="55.0" mnemonicParsing="false" onAction="#bookSelect" text="Book" />
+      <Label layoutX="33.0" layoutY="56.0" text="Select the entity :" />
+      <GridPane fx:id="grid" layoutX="274.0" layoutY="55.0" prefHeight="201.0" prefWidth="313.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="f1" strokeType="OUTSIDE" strokeWidth="0.0" text="Field 1:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Text fx:id="f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Field 2:" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Text fx:id="f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Field 5:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Text fx:id="f3" strokeType="OUTSIDE" strokeWidth="0.0" text="Field 3:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Text fx:id="f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Field 4:" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Text fx:id="f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Field 6:" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Text fx:id="f7" strokeType="OUTSIDE" strokeWidth="0.0" text="Field 7:" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <TextField fx:id="t1" GridPane.columnIndex="1" />
+            <TextField fx:id="t2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="t3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="t4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="t5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="t6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="t7" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <ChoiceBox fx:id="opSelect" layoutX="138.0" layoutY="151.0" prefHeight="26.0" prefWidth="131.0" />
+      <Label layoutX="33.0" layoutY="156.0" text="Query Field :" />
+      <Label fx:id="identLabel" layoutX="33.0" layoutY="193.0" text="Identifier :" />
+      <TextField fx:id="operandIdent" layoutX="138.0" layoutY="188.0" prefHeight="26.0" prefWidth="131.0" />
+      <Button fx:id="findButton" layoutX="138.0" layoutY="258.0" mnemonicParsing="false" onAction="#find" text="Find" />
+      <Button fx:id="executeButton" layoutX="204.0" layoutY="258.0" mnemonicParsing="false" onAction="#execute" text="Execute" />
+      <RadioButton fx:id="cRadio" layoutX="134.0" layoutY="89.0" mnemonicParsing="false" onAction="#cSelect" text="Create" />
+      <RadioButton fx:id="uRadio" layoutX="209.0" layoutY="89.0" mnemonicParsing="false" onAction="#uSelect" text="Update" />
+      <RadioButton fx:id="dRadio" layoutX="135.0" layoutY="121.0" mnemonicParsing="false" onAction="#dSelect" text="Delete" />
+      <Text layoutX="33.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Operation:" wrappingWidth="93.21951293945312" />
+      <Text fx:id="errorMessage" fill="RED" layoutX="33.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="errormessage" wrappingWidth="236.68292617797852" />
+	</children>
+</AnchorPane>

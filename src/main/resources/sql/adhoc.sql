@@ -1,0 +1,5 @@
+-- ALTER TABLE cms_book change department Category varchar(20)
+-- ALTER TABLE cms_book change BookName Name varchar(30);
+-- ALTER TABLE cms_book change BookAuthor Author varchar(30);
+-- ALTER TABLE cms_BorrowDetails change LateFee LateFee double;
+-- ALTER TABLE cms_BorrowDetails change BorrowID BorrowID int;

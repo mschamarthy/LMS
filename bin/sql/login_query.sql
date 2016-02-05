@@ -1,0 +1,1 @@
+SELECT count(*) AS count FROM cms_myuser WHERE username = ? AND password = ?;
